@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esempio 1</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Il prodotto va inserito qui {{ product }}</h1>
+        <p> Altre cose che si possono fare</p>
+        <h1>{{ product + '?' }}</h1>
+        <h1>{{ product + " " + product}}</h1>
+        <h1>{{ product=='Ciabatte' ? true : false }}</h1>
+        <h1>{{ product.split('').reverse().join('') }}</h1>
+    </div>
+
+    <p> Aprendo la console e scrivendo app.product = "pallone" è possibile vedere
+        che cambia tutto perchè è reattivo
+    </p>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

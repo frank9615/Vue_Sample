@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>esempio 5 </title>
+</head>
+
+<body>
+    <div id="test">
+        <h1> {{ title }}</h1>
+        <h1> Naturalmente si può fare anche questo {{brand}} {{prodotto}}</h1>
+        <div v-for="(item, index) in prodotti" :key="item.id" :style="{ backgroundColor : item.color }"
+            @mouseover="update(index)">
+            <p> {{ item.nome}}</p>
+        </div>
+        <div>
+            <p>Elemento Selezionato</p>
+            <p> {{ element }} </p>
+            <button @click="addToCart" :disabled="!instock"> Acquista</button>
+            <p> {{ cart }}</p>
+        </div>
+
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="main.js"></script>
+</body>
+
+
+</html>

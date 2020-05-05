@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esempio 1</title>
+</head>
+
+<body>
+    <div id="app">
+        <button v-on:click="cart +=1">Add to card</button>
+        <div class="cart">
+            <p>Cart( {{ cart }})</p>
+        </div>
+        <img v-bind:src="image">
+        <ul>
+            <li v-for="item in variations" :key="item.variantId">
+                <p @mouseover="updateProduct(item.variantImage)">{{item.variantColor}}</p>
+            </li>
+        </ul>
+        <button v-on:click="addToCart">Add to cart v2</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
